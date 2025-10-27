@@ -1,9 +1,9 @@
 .mvn
 
-*/target/classes/
-*/target/generated-sources/
-*/target/generated-test-sources/
-*/target/maven-archiver/
-*/target/maven-status/
-*/target/surefire-reports/
-*/target/test-classes/
+*/classes/
+*/generated-sources/
+*/generated-test-sources/
+*/maven-archiver/
+*/maven-status/
+*/surefire-reports/
+*/test-classes/
