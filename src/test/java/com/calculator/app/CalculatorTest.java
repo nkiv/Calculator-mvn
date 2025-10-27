@@ -20,16 +20,26 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testMultiply(){
+    public void testMultiply() {
         int result = calculator.multiply(11, 11);
         assertEquals(121, result);
     }
 
     @Test
-    public void testDivide(){
+    public void testDivide() {
         double result = calculator.divide(4, 2);
         assertEquals(2, result);
         result = calculator.divide(1, 2);
         assertEquals(.5, result);
+    }
+
+    @Test
+    public void testPower() {
+        int result = calculator.power(4, 2);
+        assertEquals(16, result);
+        result = calculator.power(4, 3);
+        assertEquals(64, result);
+        result = calculator.power(2, 8);
+        assertEquals(256, result);
     }
 }
