@@ -7,16 +7,17 @@ import java.util.Scanner;
  */
 public class App {
 
-    public void appLoop(Scanner scan) {
+    public static void appLoop(Scanner scan) {
         String c = "y";
         while(c.toLowerCase().charAt(0) == 'y'){
             userInterface(scan);
+            System.out.println("Continue? (y/n)");
             c = scan.next();
         }
         System.out.println("Exiting!");
     }
 
-    public void userInterface(Scanner scan){
+    public static void userInterface(Scanner scan){
         int x;
         int y;
         double result = 0;
@@ -28,32 +29,24 @@ public class App {
         System.out.println("Operand 1: ");
         x = scan.nextInt();
         System.out.println("Operator: ");
-        o = scan.nextLine();
+        o = scan.next();
         System.out.println("Operand 2: ");
         y = scan.nextInt();
 
         switch (o) {
-            case "+":
-                result = calculator.add(x, y);
-                break;
-            case "-":
-                result = calculator.subtract(y, y);
-                break;
-            case "*":
-                result = calculator.multiply(x, y);
-                break;
-            case "/":
-                result = calculator.divide(x, y);
-                break;
-            default:
+            case "+" -> result = calculator.add(x, y);
+            case "-" -> result = calculator.subtract(y, y);
+            case "*" -> result = calculator.multiply(x, y);
+            case "/" -> result = calculator.divide(x, y);
+            default -> {
                 System.out.println("Unknown math operator, please try again");
                 result = Double.NEGATIVE_INFINITY;
-                break;
+            }
         }
-        System.out.println("Result:" + x + " " + o + " " + y + " = " + result);
+        System.out.println("Result:\nd" + x + " " + o + " " + y + " = " + result);
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
+        appLoop(scan);
     }
 }
