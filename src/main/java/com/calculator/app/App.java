@@ -37,18 +37,20 @@ public class App {
             case "+" ->
                 result = calculator.add(x, y);
             case "-" ->
-                result = calculator.subtract(y, y);
+                result = calculator.subtract(x, y);
             case "*" ->
                 result = calculator.multiply(x, y);
             case "/" ->
                 result = calculator.divide(x, y);
+            case "^" ->
+                result = calculator.power(x, y);
             default -> {
                 System.out.println("Unknown math operator, please try again");
                 result = Double.NEGATIVE_INFINITY;
             }
         }
 
-        System.out.println("Result:\nd" + x + " " + o + " " + y + " = " + result);
+        System.out.println("Result:\n" + x + " " + o + " " + y + " = " + result);
     }
 
     public static void main(String[] args) {
