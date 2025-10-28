@@ -25,4 +25,15 @@ public class Calculator {
         }
         return result;
     }
+
+    public double sqrt(double a) {
+        double x = a / 2.0;  // Initial guess
+
+        // More iterations mean better precision
+        for (int i = 0; i < 4; i++) {
+            x = 0.5 * (x + a / x);  // Newton's formula
+        }
+
+        return x;
+    }
 }

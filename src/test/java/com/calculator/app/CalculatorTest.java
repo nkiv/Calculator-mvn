@@ -42,4 +42,10 @@ public class CalculatorTest {
         result = calculator.power(2, 8);
         assertEquals(256, result);
     }
+
+    @Test
+    public void testSquareRoot() {
+        double result = calculator.sqrt(4);
+        assertEquals(2, result);
+    }
 }
